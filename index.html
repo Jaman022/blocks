@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример блочных и линейных элементов</title>
+    <style>
+        /* Преобразуем блочные элементы в линейные */
+        h1 {
+            display: inline;
+            background-color: lightblue;
+        }
+
+        div {
+            display: inline; /* Преобразуем div в линейный элемент */
+            background-color: lightgreen;
+        }
+
+        /* Преобразуем линейный элемент img в блочный */
+        img {
+            display: block; /* img по умолчанию - линейный, делаем его блочным */
+            margin: 20px 0; /* Добавляем отступы для визуализации */
+        }
+
+        p {
+            display: block; /* Для визуализации оставляем p блочным */
+        }
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: block; /* Контейнер как блочный элемент */
+    padding: 20px; /* Отступы контейнера */
+    border: 1px solid #ccc; /* Граница контейнера */
+    background-color: #f9f9f9; /* Цвет фона контейнера */
+}
+
+.container p,
+.container img,
+.container a {
+    display: block; /* Преобразование вложенных элементов в блочные */
+    margin: 10px 0; /* Отступы между элементами */
+}
+
+/* Выравнивание по вертикали */
+.container {
+    display: flex;
+    flex-direction: column; /* Устанавливаем направление по колонкам */
+    align-items: center; /* Выравнивание по центру */
+}
+    </style>
+</head>
+<body>
+
+    <h1>Заголовок</h1> <!-- Блочный элемент по умолчанию -->
+    <p>Это абзац текста. Он тоже является блочным элементом по умолчанию.</p> <!-- Блочный элемент -->
+    <div>Контейнер (div). Теперь он линейный элемент.</div> <!-- Блочный элемент по умолчанию -->
+    <img src="https://alscofirstaid.com.au/wp-content/uploads/2014/01/placeholder-150x150.png" alt="Пример картинки"> <!-- Линейный элемент по умолчанию -->
+    <div class="container">
+        <p>Это пример абзаца.</p>
+        <img src="../blocks/image.jpg" alt="Пример изображения" />
+        <a href="https://www.deviantart.com/somemilk/art/Spongebob-4-150x150-PNG-132615469" target="_blank">Это ссылка</a>
+    </div>
+</body>
+</html>
